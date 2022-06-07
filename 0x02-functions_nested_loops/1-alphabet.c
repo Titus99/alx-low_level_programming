@@ -22,9 +22,9 @@ void print_alphabet(void)
 
 
 
-		n = 'a';
+		 n = 'a';
 
-		while (n <= 'z')
+		 while (n <= 'z')
 
 		{
 
@@ -34,6 +34,6 @@ void print_alphabet(void)
 
 					}
 
-		_putchar('\n');
+		 _putchar('\n');
 
 }
