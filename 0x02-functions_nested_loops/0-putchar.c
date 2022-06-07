@@ -1,10 +1,9 @@
-#include<stdio.h>
+#include "main.h"
 
 /**
-* main - Print the word "_putchar"
+ * main - Entry point
  *
- * Return: Always 0 (Success)
- *
+ * Return: 0
  */
 
 
@@ -13,22 +12,22 @@ int main(void)
 
 {
 
-		int i;
+		char x[] = "_putchar";
 
-		char p[] = "Holberton";
+			int i;
 
 
 
-		for (i = 0; i < 9; i++)
+				for (i = 0; i < 8; i++)
 
-				{
+						{
 
-					_putchar(p[i]);
+								_putchar(x[i]);
 
-								}
+									}
 
 					_putchar('\n');
 
-				return (0);
+						return (0);
 
 }
