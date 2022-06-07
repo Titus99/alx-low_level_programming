@@ -1,12 +1,12 @@
 #include<stdio.h>
 
 /**
- * Main Entry
+ * Main Entry - print "_putchar"
  *
  * return 0 (always) success
  *
  */
-int main(void)
+int main (void)
 
 {
 	printf("_putchar\n");
