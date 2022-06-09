@@ -1,16 +1,24 @@
 #include "main.h"
 
 /**
- * mul - multiplies integers and returns the result
- * @a: int to be multiplied by b
- * @b: int to be multiplied by a
- * Return: product of a and b
+ * print_most_numbers - print numbers from 0 to 9 except 2 and 4
+ *
+ * Description: print numbers from 0 to 9 except 2 and 4
+ *
+ * Return: return void
+ *
  */
 
-int mul(int a, int b)
-{
-		int d;
+void print_most_numbers(void)
 
-		d = a * b;
-		return (d);
+{
+
+		int i;
+
+		for (i = 0; i <= 9; i++)
+		{
+			if (i != 2 && i != 4)
+			_putchar(i);
+		}
+		_putchar('\n');
 }
