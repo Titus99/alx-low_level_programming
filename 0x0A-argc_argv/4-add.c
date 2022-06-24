@@ -2,66 +2,30 @@
 #include <stdlib.h>
 
 /**
- * main - Prints the sum of args positive numbers
- * @argc: argument count
- * @argv: argument vector
- * Return: Always zero
+ * main - returns an addition of positive arguments
+ * @argc: length of arguments
+ * @argv: arguments passed
+ * Return: 0
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 
 {
-
-	int i;
-
-	unsigned int k, sum = 0;
-
-	char *e;
-
-	if (argc > 1)
-
-	{
-
-		for (i = 1; i < argc; i++)
-
+		int a, b, result = 0;
+		for (a = 1; a < argc; a += 1)
 		{
-
-			e = argv[i];
-
-			for (k = 0; k < strlen(e); k++)
-
-			{
-
-				if (e[k] < 48 || e[k] > 57)
-
-				{
-
-					printf("Error\n");
-
-					return (1);
-
-				}
-
-			}
-
-			sum += atoi(e);
-
-			e++;
-
+		for (b = 0; (argv[a])[b] != '\0'; b += 1)
+		{
+		if (((argv[a])[b] - '0') >= 0 && ((argv[a])[b] - '0') <= 9)
+		continue;
+		else
+		{
+		printf("Error\n");
+		return (1);
 		}
-
-		printf("%d\n", sum);
-
-	}
-
-	else
-
-	{
-
-		printf("0\n");
-
-	}
-
-	return (0);
-
+		}
+		result += atoi(argv[a]);
+		}
+		printf("%d\n", result);
+		return (0);
 }
