@@ -1,66 +1,31 @@
 #include <stdio.h>
-#include "3-calc.h"
+#include <stdlib.h>
 
 /**
- * op_add - adds two ints
- * @a: number 1
- * @b: number 2
- * Return: sum of the two numbers
- **/
+ * main - function which prints opcode of the main function
+ * @argc: arguments' length
+ * @argv: contains arguments
+ * Return: 0
+ */
 
-int op_add(int a, int b)
+int main(int argc, char **argv)
 {
-		return (a + b);
+int i;
+if (argc != 2)
+{
+printf("Error\n");
+exit(1);
 }
-
-/**
- * op_sub - subtract two numbers
- * @a: number 1
- * @b: number 2
- * Return: result of substraction
- **/
-
-int op_sub(int a, int b)
+if (atoi(argv[1]) < 0)
 {
-		return (a - b);
+printf("Error\n");
+exit(2);
 }
-
-/**
- * op_mul - multiply two numbers
- * @a: number 1
- * @b: number 2
- * Return: result of multiplication
- **/
-
-int op_mul(int a, int b)
+while (i < atoi(argv[1]) - 1)
 {
-		return (a * b);
+printf("%02hhx ", ((char *) main)[i]);
+i++;
 }
-
-/**
- * op_div - divides two numbers
- * @a: number 1
- * @b: number 2
- * Return: result of divison
- **/
-
-int op_div(int a, int b)
-{
-		if (b == 0)
-					return (-1);
-			return (a / b);
-}
-
-/**
- * op_mod - calculates mod of two ints
- * @a: number 1
- * @b: number 2
- * Return: mod of 1, 2
- **/
-
-int op_mod(int a, int b)
-{
-		if (b == 0)
-					return (-1);
-			return (a % b);
+printf("%02hhx\n", ((char *) main)[i]);
+return (0);
 }
